@@ -1,0 +1,116 @@
+{
+  "project_name": "Hanna & Niyas Wedding Invitation",
+  "app_type": "marketing_site",
+  "theme": "light",
+  "archetype": "5 (Jewel & Luxury) - Light variant with Jewel Accents",
+  "design_philosophy": "A minimalist, lovely, and elegant Muslim wedding invitation. Blending cream/ivory base aesthetics with deep maroon and gold jewel accents for contrast. The experience focuses on a soft envelope reveal, beautiful typography, and clear event details, optimized heavily for mobile devices.",
+  "typography": {
+    "fonts": [
+      {
+        "family": "Cormorant Garamond",
+        "type": "heading",
+        "weights": ["400", "500", "600"],
+        "purpose": "Primary elegant headings (Event names, Location titles)"
+      },
+      {
+        "family": "Great Vibes",
+        "type": "script",
+        "weights": ["400"],
+        "purpose": "Couple names (Hanna & Niyas) to provide an ornamental, romantic script feel"
+      },
+      {
+        "family": "Montserrat",
+        "type": "body",
+        "weights": ["300", "400", "500"],
+        "purpose": "Clean, highly readable body text, dates, times, and small labels"
+      },
+      {
+        "family": "Amiri",
+        "type": "arabic",
+        "weights": ["400", "700"],
+        "purpose": "Arabic calligraphy (Bismillah, Assalamu Alaikum) rendering"
+      }
+    ],
+    "hierarchy": {
+      "h1_script": "text-5xl sm:text-6xl lg:text-7xl font-['Great_Vibes'] tracking-normal text-[#7A1B28]",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-['Cormorant_Garamond'] tracking-wide text-[#C5A059]",
+      "h3": "text-xl sm:text-2xl font-['Cormorant_Garamond'] text-[#333333]",
+      "body": "text-sm sm:text-base font-['Montserrat'] text-[#4A4A4A] leading-relaxed",
+      "arabic": "text-3xl sm:text-4xl font-['Amiri'] text-[#C5A059] leading-loose",
+      "label": "text-xs uppercase tracking-[0.2em] font-['Montserrat'] text-[#C5A059]"
+    }
+  },
+  "colors": {
+    "backgrounds": {
+      "cream_base": "#FAF9F6",
+      "cream_surface": "#F4F1EA",
+      "maroon_section": "#7A1B28",
+      "maroon_dark": "#5C101D"
+    },
+    "text": {
+      "primary_dark": "#2C2A29",
+      "secondary_dark": "#4A4A4A",
+      "light_on_maroon": "#FDFBF7",
+      "gold_accent": "#C5A059"
+    },
+    "borders": {
+      "gold_light": "rgba(197, 160, 89, 0.3)",
+      "gold_solid": "#C5A059"
+    },
+    "buttons": {
+      "primary": "bg-[#7A1B28] text-white hover:bg-[#5C101D]",
+      "secondary": "bg-transparent border border-[#C5A059] text-[#C5A059] hover:bg-[#C5A059] hover:text-white"
+    }
+  },
+  "layout_spacing": {
+    "container": "max-w-2xl mx-auto px-6 sm:px-12",
+    "section_padding": "py-20 sm:py-24",
+    "element_gap": "gap-6 sm:gap-8",
+    "borders": "rounded-none or very subtle rounded-sm (elegant, not bubbly)"
+  },
+  "motion_and_interactions": {
+    "envelope_reveal": {
+      "trigger": "tap/click",
+      "animation": "Framer Motion slide-up or scale-up fade out of the 'envelope flap' revealing the hero content beneath. Duration 1.2s, ease: [0.76, 0, 0.24, 1]."
+    },
+    "scroll_reveal": {
+      "animation": "Staggered fade-up for text elements as they enter viewport using Framer Motion (initial opacity 0, y: 20 -> animate opacity 1, y: 0). Duration 0.8s."
+    },
+    "smooth_scroll": "Lenis library must be used to give a premium, weighty scroll feel."
+  },
+  "components_instructions": {
+    "EnvelopeOverlay": "A fixed z-50 full-screen component. Cream background with a gold border. A central button/seal saying 'Tap to Open'. On click, animates away to reveal the site.",
+    "HeroSection": "Cream background. Features Bismillah in Arabic, Couple Names in Script, and a live countdown to Nikkah (May 10, 2026).",
+    "NikkahDetails": "Cream background, elegant gold border container. Nikkah details: Sunday, May 10, 2026, 12:00 noon, Century Staples Convention Centre, Erattupetta.",
+    "ReceptionDetails": "Maroon background (`bg-[#7A1B28]`) to contrast the Nikkah. Gold text. Details: Monday, May 11, 2026, 7:00 PM onwards, Nehru Memorial Town Hall, Mattanchery.",
+    "FamilySection": "Cream background. Minimalist list of parents' names.",
+    "ActionButtons": "Add to Calendar and Open in Maps buttons. Use lucide-react icons (MapPin, Calendar). Style: secondary outline for cream bg, solid gold for maroon bg."
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "texture_cream",
+        "url": "https://images.pexels.com/photos/190295/pexels-photo-190295.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Subtle cream paper texture, can be used as a very low opacity background mix-blend-multiply."
+      },
+      {
+        "category": "texture_maroon",
+        "url": "https://images.pexels.com/photos/36305726/pexels-photo-36305726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Rich red velvet texture, use in the Reception section background with low opacity overlay to give depth."
+      },
+      {
+        "category": "gold_pattern",
+        "url": "https://images.pexels.com/photos/10559197/pexels-photo-10559197.jpeg",
+        "description": "Gold Islamic geometric pattern. Can be used as a subtle border element or background detail with very low opacity."
+      }
+    ],
+    "icons": "lucide-react"
+  },
+  "critical_rules": [
+    "NO standard Shadcn UI generic cards. Build elegant custom HTML/Tailwind structures with 1px gold borders and generous padding.",
+    "ALWAYS use `data-testid` on buttons and interactive elements.",
+    "DO NOT use Inter or standard sans fonts for headings. Stick to Great Vibes, Cormorant Garamond, and Montserrat.",
+    "Make sure contrast is high enough: Gold on Cream might be light, use a darker shade of gold (#B8860B or #996515) for text if needed for APCA contrast.",
+    "Text Bismillah 'بسم الله الرحمن الرحيم' must be rendered as raw text with 'font-amiri' instead of an image for crisp resolution."
+  ]
+}

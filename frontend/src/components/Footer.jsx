@@ -41,10 +41,10 @@ export default function Footer() {
         <motion.p
           {...fade}
           transition={{ ...fade.transition, delay: 0.35 }}
-          className="font-script text-[#7A1B28] text-5xl sm:text-6xl mt-2"
+          className="font-script text-[#7A1B28] text-4xl sm:text-5xl mt-2 tracking-[0.04em]"
         >
           Hanna
-          <span className="font-serif-el italic text-[#A88842] text-xl tracking-[0.08em] mx-4">
+          <span className="font-serif-el italic text-[#A88842] text-base tracking-[0.12em] mx-4">
             and
           </span>
           Niyas

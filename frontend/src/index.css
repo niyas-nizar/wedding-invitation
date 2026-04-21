@@ -51,7 +51,7 @@ html, body {
   z-index: 0;
 }
 
-.font-script { font-family: 'Great Vibes', cursive; }
+.font-script { font-family: 'Italiana', serif; letter-spacing: 0.02em; }
 .font-serif-el { font-family: 'Cormorant Garamond', serif; }
 .font-sans-el { font-family: 'Montserrat', sans-serif; }
 .font-arabic { font-family: 'Amiri', serif; }

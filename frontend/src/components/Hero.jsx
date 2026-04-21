@@ -43,14 +43,14 @@ export default function Hero() {
         <motion.h1
           {...fade}
           transition={{ ...fade.transition, delay: 0.4 }}
-          className="font-script text-[#7A1B28] text-[68px] sm:text-[96px] lg:text-[120px] leading-[1.02] mt-5 tracking-[0.01em]"
+          className="font-serif-el text-[#7A1B28] text-[64px] sm:text-[92px] lg:text-[112px] leading-[0.95] mt-5 tracking-[0.01em] font-medium"
           data-testid="hero-couple-names"
         >
-          Hanna
-          <span className="inline-block font-serif-el italic text-[#A88842] text-4xl sm:text-5xl mx-4 sm:mx-6 align-middle">
+          <span className="block">Hanna</span>
+          <span className="block font-serif-el italic text-[#A88842] text-5xl sm:text-6xl my-2">
             &amp;
           </span>
-          Niyas
+          <span className="block">Niyas</span>
         </motion.h1>
 
         <motion.p

@@ -24,6 +24,33 @@ html, body {
   overflow-x: hidden;
 }
 
+/* Aesthetic site background — soft cream with layered floral SVG + paper grain */
+.bg-aesthetic {
+  position: relative;
+  background-color: #FBF7EE;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 20% 0%, rgba(197,160,89,0.12), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 85% 100%, rgba(122,27,40,0.08), transparent 60%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'><g fill='none' stroke='%23C5A059' stroke-width='0.6' opacity='0.18'><path d='M40 40 C 60 30, 80 50, 70 70 C 60 90, 40 80, 40 60 Z'/><circle cx='55' cy='55' r='2'/><path d='M160 150 C 180 140, 200 160, 190 180 C 180 200, 160 190, 160 170 Z'/><circle cx='175' cy='165' r='2'/><path d='M110 20 C 114 10, 126 10, 130 20 C 134 30, 126 36, 120 36 C 114 36, 106 30, 110 20 Z'/><path d='M20 180 C 30 170, 50 172, 46 190 C 42 208, 22 200, 20 180 Z'/><path d='M180 30 Q 195 45, 180 60 Q 165 45, 180 30 Z'/></g></svg>");
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-size: auto, auto, 220px 220px;
+  min-height: 100vh;
+}
+
+.bg-aesthetic::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(197,160,89,0.08) 1px, transparent 1px),
+    radial-gradient(rgba(122,27,40,0.05) 1px, transparent 1px);
+  background-size: 28px 28px, 40px 40px;
+  background-position: 0 0, 14px 20px;
+  opacity: 0.8;
+  z-index: 0;
+}
+
 .font-script { font-family: 'Great Vibes', cursive; }
 .font-serif-el { font-family: 'Cormorant Garamond', serif; }
 .font-sans-el { font-family: 'Montserrat', sans-serif; }

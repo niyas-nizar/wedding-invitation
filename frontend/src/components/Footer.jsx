@@ -12,10 +12,10 @@ const fade = {
 export default function Footer() {
   return (
     <footer
-      className="paper-grain w-full py-24 px-6 text-center"
+      className="relative w-full py-24 px-6 text-center"
       data-testid="footer-section"
     >
-      <div className="max-w-xl mx-auto">
+      <div className="max-w-xl mx-auto relative z-10">
         <motion.div {...fade} className="mb-6">
           <Ornament className="w-28 h-8 mx-auto opacity-80" />
         </motion.div>
@@ -25,52 +25,29 @@ export default function Footer() {
           transition={{ ...fade.transition, delay: 0.1 }}
           className="font-serif-el italic text-[#4A4A4A] text-base sm:text-lg leading-relaxed"
         >
-          Your blessings and presence
+          Your presence and blessings
           <br />
           would make our day complete.
         </motion.p>
 
         <motion.p
           {...fade}
-          transition={{ ...fade.transition, delay: 0.2 }}
-          className="font-script text-[#7A1B28] text-4xl sm:text-5xl mt-8"
+          transition={{ ...fade.transition, delay: 0.25 }}
+          className="font-serif-el italic text-[#A88842] tracking-[0.15em] text-sm mt-10"
         >
-          With love,
-          <br />
-          Hanna &amp; Niyas
+          with love,
         </motion.p>
-
-        <motion.div
-          {...fade}
-          transition={{ ...fade.transition, delay: 0.3 }}
-          className="mt-10 space-y-2"
-        >
-          <p className="font-serif-el tracking-[0.3em] uppercase text-[10px] text-[#A88842]">
-            Sharing the happiness
-          </p>
-          <p className="font-sans-el text-[#4A4A4A] text-xs tracking-wide">
-            Nihal · Haya · Haifa · Nijas &amp; Jumana · Nooh · Nasim &amp;
-            Nazia · Ebrahim · Hajira · Zainab
-          </p>
-          <p className="font-sans-el text-[#888] text-xs mt-4">
-            Ph: 9447421033 &nbsp;·&nbsp; 9895538868 &nbsp;·&nbsp; 9447163540
-          </p>
-        </motion.div>
-
-        <motion.div
-          {...fade}
-          transition={{ ...fade.transition, delay: 0.45 }}
-          className="gold-divider my-10"
-        >
-          <span className="font-script text-xl text-[#C5A059]">◆</span>
-        </motion.div>
 
         <motion.p
           {...fade}
-          transition={{ ...fade.transition, delay: 0.55 }}
-          className="font-arabic text-[#7A1B28] text-xl"
+          transition={{ ...fade.transition, delay: 0.35 }}
+          className="font-script text-[#7A1B28] text-5xl sm:text-6xl mt-2"
         >
-          جزاكم الله خيرا
+          Hanna
+          <span className="font-serif-el italic text-[#A88842] text-xl tracking-[0.08em] mx-4">
+            and
+          </span>
+          Niyas
         </motion.p>
       </div>
     </footer>

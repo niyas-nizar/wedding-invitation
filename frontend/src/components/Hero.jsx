@@ -12,7 +12,7 @@ const fade = {
 export default function Hero() {
   return (
     <section
-      className="relative w-full min-h-[100svh] flex items-center justify-center px-6 py-24"
+      className="relative w-full min-h-[92svh] flex items-center justify-center px-6 pt-20 pb-10"
       data-testid="hero-section"
     >
       <div className="max-w-2xl w-full mx-auto text-center relative z-10">
@@ -43,12 +43,12 @@ export default function Hero() {
         <motion.h1
           {...fade}
           transition={{ ...fade.transition, delay: 0.4 }}
-          className="font-script text-[#7A1B28] text-[56px] sm:text-[80px] lg:text-[100px] leading-[1.05] mt-6 tracking-[0.04em]"
+          className="font-script text-[#7A1B28] text-[68px] sm:text-[96px] lg:text-[120px] leading-[1.02] mt-5 tracking-[0.01em]"
           data-testid="hero-couple-names"
         >
           Hanna
-          <span className="block font-serif-el italic text-[#A88842] tracking-[0.12em] text-lg sm:text-xl normal-case my-4">
-            and
+          <span className="inline-block font-serif-el italic text-[#A88842] text-4xl sm:text-5xl mx-4 sm:mx-6 align-middle">
+            &amp;
           </span>
           Niyas
         </motion.h1>
@@ -56,7 +56,7 @@ export default function Hero() {
         <motion.p
           {...fade}
           transition={{ ...fade.transition, delay: 0.55 }}
-          className="font-serif-el italic text-[#4A4A4A] text-base sm:text-lg mt-8"
+          className="font-serif-el italic text-[#4A4A4A] text-base sm:text-lg mt-6"
         >
           we invite you to celebrate our wedding
         </motion.p>
@@ -64,16 +64,20 @@ export default function Hero() {
         <motion.div
           {...fade}
           transition={{ ...fade.transition, delay: 0.7 }}
-          className="gold-divider my-10"
+          className="mt-10"
         >
-          <span className="font-serif-el tracking-[0.4em] text-[10px] uppercase">
-            10 · 05 · 2026
-          </span>
+          <p className="font-serif-el text-[#7A1B28] text-3xl sm:text-4xl lg:text-5xl tracking-[0.15em]">
+            10 <span className="text-[#C5A059]">·</span> 05 <span className="text-[#C5A059]">·</span> 2026
+          </p>
+          <p className="font-serif-el italic tracking-[0.4em] text-[11px] uppercase text-[#A88842] mt-3">
+            Sunday
+          </p>
         </motion.div>
 
         <motion.div
           {...fade}
           transition={{ ...fade.transition, delay: 0.85 }}
+          className="mt-10"
         >
           <Countdown />
         </motion.div>

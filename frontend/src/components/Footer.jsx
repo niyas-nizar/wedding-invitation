@@ -12,7 +12,7 @@ const fade = {
 export default function Footer() {
   return (
     <footer
-      className="relative w-full py-24 px-6 text-center"
+      className="relative w-full py-14 sm:py-16 px-6 text-center"
       data-testid="footer-section"
     >
       <div className="max-w-xl mx-auto relative z-10">
@@ -41,11 +41,11 @@ export default function Footer() {
         <motion.p
           {...fade}
           transition={{ ...fade.transition, delay: 0.35 }}
-          className="font-script text-[#7A1B28] text-4xl sm:text-5xl mt-2 tracking-[0.04em]"
+          className="font-script text-[#7A1B28] text-4xl sm:text-5xl mt-2 tracking-[0.01em]"
         >
           Hanna
-          <span className="font-serif-el italic text-[#A88842] text-base tracking-[0.12em] mx-4">
-            and
+          <span className="font-serif-el italic text-[#A88842] text-2xl mx-3 align-middle">
+            &amp;
           </span>
           Niyas
         </motion.p>

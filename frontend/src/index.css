@@ -24,16 +24,18 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Aesthetic site background — soft cream with layered floral SVG + paper grain */
+/* Aesthetic site background — layered florals, dots, gold arches */
 .bg-aesthetic {
   position: relative;
   background-color: #FBF7EE;
   background-image:
-    radial-gradient(ellipse 70% 50% at 20% 0%, rgba(197,160,89,0.12), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 85% 100%, rgba(122,27,40,0.08), transparent 60%),
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'><g fill='none' stroke='%23C5A059' stroke-width='0.6' opacity='0.18'><path d='M40 40 C 60 30, 80 50, 70 70 C 60 90, 40 80, 40 60 Z'/><circle cx='55' cy='55' r='2'/><path d='M160 150 C 180 140, 200 160, 190 180 C 180 200, 160 190, 160 170 Z'/><circle cx='175' cy='165' r='2'/><path d='M110 20 C 114 10, 126 10, 130 20 C 134 30, 126 36, 120 36 C 114 36, 106 30, 110 20 Z'/><path d='M20 180 C 30 170, 50 172, 46 190 C 42 208, 22 200, 20 180 Z'/><path d='M180 30 Q 195 45, 180 60 Q 165 45, 180 30 Z'/></g></svg>");
-  background-repeat: no-repeat, no-repeat, repeat;
-  background-size: auto, auto, 220px 220px;
+    radial-gradient(ellipse 65% 45% at 15% 0%, rgba(197,160,89,0.16), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 90% 100%, rgba(122,27,40,0.1), transparent 60%),
+    radial-gradient(circle at 50% 30%, rgba(255,245,220,0.5), transparent 65%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='340' height='340' viewBox='0 0 340 340'><g fill='none' stroke='%23C5A059' stroke-width='0.7' opacity='0.22'><path d='M40 60 C 70 40, 110 70, 90 100 C 70 130, 30 110, 40 80 Z'/><circle cx='65' cy='82' r='2.2'/><path d='M55 65 Q 70 60, 85 75' stroke-width='0.5'/><path d='M240 220 C 270 200, 310 230, 290 260 C 270 290, 230 270, 240 240 Z'/><circle cx='265' cy='242' r='2.2'/><path d='M250 225 Q 265 220, 280 235' stroke-width='0.5'/><path d='M180 40 C 186 28, 204 28, 210 40 C 216 52, 204 60, 196 60 C 188 60, 174 52, 180 40 Z'/><circle cx='195' cy='44' r='1.5'/><path d='M40 260 C 50 250, 72 252, 66 272 C 60 292, 36 282, 40 260 Z'/><path d='M300 80 Q 315 95, 300 110 Q 285 95, 300 80 Z'/><circle cx='300' cy='95' r='1.5'/><path d='M130 280 Q 140 270, 150 280 Q 140 290, 130 280 Z'/><path d='M130 140 L 132 132 M 160 150 L 168 148 M 150 170 L 158 176' stroke-width='0.5'/><circle cx='150' cy='160' r='1'/><path d='M20 180 Q 30 175, 30 165 M 30 165 Q 40 170, 42 180' stroke-width='0.5'/></g></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g fill='%23C5A059' opacity='0.08'><circle cx='10' cy='10' r='1'/><circle cx='40' cy='20' r='0.7'/><circle cx='70' cy='10' r='1'/><circle cx='25' cy='50' r='0.7'/><circle cx='55' cy='60' r='1'/><circle cx='15' cy='70' r='0.8'/></g></svg>");
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
+  background-size: auto, auto, auto, 340px 340px, 80px 80px;
   min-height: 100vh;
 }
 
@@ -43,15 +45,30 @@ html, body {
   inset: 0;
   pointer-events: none;
   background-image:
-    radial-gradient(rgba(197,160,89,0.08) 1px, transparent 1px),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='none' stroke='%23C5A059' stroke-width='0.8' opacity='0.25'><path d='M10 40 Q 40 10, 80 20 Q 110 30, 120 55 Q 125 75, 105 90 Q 80 100, 55 90 Q 25 80, 15 55 Z'/><path d='M40 50 Q 60 40, 80 55' /><circle cx='55' cy='52' r='1.5' fill='%23C5A059'/><circle cx='75' cy='58' r='1.5' fill='%23C5A059'/></g></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='none' stroke='%237A1B28' stroke-width='0.8' opacity='0.18'><path d='M190 160 Q 160 190, 120 180 Q 90 170, 80 145 Q 75 125, 95 110 Q 120 100, 145 110 Q 175 120, 185 145 Z'/><path d='M160 150 Q 140 160, 120 145' /><circle cx='145' cy='148' r='1.5' fill='%237A1B28'/><circle cx='125' cy='142' r='1.5' fill='%237A1B28'/></g></svg>");
+  background-repeat: no-repeat, no-repeat;
+  background-position: -40px -30px, calc(100% + 40px) calc(100% + 30px);
+  background-size: 340px 340px, 340px 340px;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.bg-aesthetic::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(197,160,89,0.09) 1px, transparent 1px),
     radial-gradient(rgba(122,27,40,0.05) 1px, transparent 1px);
-  background-size: 28px 28px, 40px 40px;
-  background-position: 0 0, 14px 20px;
-  opacity: 0.8;
+  background-size: 32px 32px, 48px 48px;
+  background-position: 0 0, 16px 24px;
+  opacity: 0.7;
   z-index: 0;
 }
 
-.font-script { font-family: 'Italiana', serif; letter-spacing: 0.02em; }
+.font-script { font-family: 'EB Garamond', serif; letter-spacing: 0.01em; font-weight: 500; }
 .font-serif-el { font-family: 'Cormorant Garamond', serif; }
 .font-sans-el { font-family: 'Montserrat', sans-serif; }
 .font-arabic { font-family: 'Amiri', serif; }

@@ -108,7 +108,7 @@ export default function Events() {
   return (
     <section
       id="events"
-      className="relative w-full py-24 sm:py-28 px-6"
+      className="relative w-full py-10 sm:py-14 px-6"
       data-testid="events-section"
     >
       <div className="max-w-5xl mx-auto relative z-10">

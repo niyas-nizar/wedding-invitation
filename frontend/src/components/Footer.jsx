@@ -41,13 +41,13 @@ export default function Footer() {
         <motion.p
           {...fade}
           transition={{ ...fade.transition, delay: 0.35 }}
-          className="font-names text-[#7A1B28] text-6xl sm:text-7xl mt-3 leading-tight"
+          className="font-names text-[#7A1B28] text-xl sm:text-2xl mt-3 leading-tight"
         >
-          <span className="block">Hanna</span>
-          <span className="block font-serif-el italic text-[#A88842] text-2xl sm:text-3xl my-1">
+          Hanna{" "}
+          <span className="font-serif-el italic text-[#A88842] text-lg sm:text-xl mx-0.5">
             &amp;
-          </span>
-          <span className="block">Niyas</span>
+          </span>{" "}
+          Niyas
         </motion.p>
       </div>
     </footer>

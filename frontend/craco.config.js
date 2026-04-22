@@ -37,6 +37,11 @@ let webpackConfig = {
       '@': path.resolve(__dirname, 'src'),
     },
     configure: (webpackConfig) => {
+      // Project is JS/JSX-only; drop fork-ts-checker to avoid ajv 6/8 + nested
+      // ajv-keywords conflicts with npm's hoisting (terser vs fork-ts-checker).
+      webpackConfig.plugins = (webpackConfig.plugins || []).filter(
+        (p) => p?.constructor?.name !== "ForkTsCheckerWebpackPlugin"
+      );
 
       // Add ignored patterns to reduce watched directories
         webpackConfig.watchOptions = {

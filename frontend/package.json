@@ -60,7 +60,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "process-couple": "node scripts/process-couple-asset.mjs"
+    "process-couple": "node scripts/process-couple-asset.mjs",
+    "transparent-couple": "node scripts/transparent-couple-png.mjs"
   },
   "browserslist": {
     "production": [

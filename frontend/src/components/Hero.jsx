@@ -41,7 +41,7 @@ export default function Hero() {
           data-testid="couple-illustration"
         >
           <div
-            className="absolute left-1/2 top-1/2 w-[min(100%,220px)] h-[min(200px,30vh)] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className="absolute left-1/2 top-1/2 w-[min(100%,180px)] h-[min(168px,26vh)] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
             style={{
               background:
                 "radial-gradient(ellipse 55% 60% at 50% 65%, rgba(197,160,89,0.18), transparent 72%)",
@@ -52,7 +52,7 @@ export default function Hero() {
           <motion.img
             src="/assets/couple.png"
             alt="Hanna and Niyas illustration"
-            className="relative z-[1] h-[clamp(128px,26vh,200px)] sm:h-[clamp(150px,30vh,230px)] w-auto max-w-[min(92vw,220px)] object-contain object-bottom select-none opacity-[0.94] drop-shadow-[0_4px_20px_rgba(57,20,30,0.12)]"
+            className="relative z-[1] h-[clamp(104px,22vh,168px)] sm:h-[clamp(124px,25vh,198px)] w-auto max-w-[min(92vw,180px)] object-contain object-bottom select-none opacity-[0.94] drop-shadow-[0_4px_20px_rgba(57,20,30,0.12)]"
             draggable="false"
             animate={{ y: [0, -4, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}

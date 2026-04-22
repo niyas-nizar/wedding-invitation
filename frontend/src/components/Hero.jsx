@@ -50,7 +50,7 @@ export default function Hero() {
             aria-hidden
           />
           <motion.img
-            src="/assets/couple.png"
+            src={`${process.env.PUBLIC_URL || ""}/assets/couple.png`}
             alt="Hanna and Niyas illustration"
             className="relative z-[1] h-[clamp(104px,22vh,168px)] sm:h-[clamp(124px,25vh,198px)] w-auto max-w-[min(92vw,180px)] object-contain object-bottom select-none opacity-[0.94] drop-shadow-[0_4px_20px_rgba(57,20,30,0.12)]"
             draggable="false"

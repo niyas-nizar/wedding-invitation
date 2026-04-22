@@ -62,7 +62,7 @@
     "build": "craco build",
     "test": "craco test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npx gh-pages -d build",
     "process-couple": "node scripts/process-couple-asset.mjs",
     "transparent-couple": "node scripts/transparent-couple-png.mjs"
   },

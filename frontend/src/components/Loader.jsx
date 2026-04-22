@@ -5,7 +5,7 @@ export default function Loader() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const minDelay = new Promise((r) => setTimeout(r, 1800));
+    const minDelay = new Promise((r) => setTimeout(r, 1600));
     const fontsReady =
       typeof document !== "undefined" && document.fonts && document.fonts.ready
         ? document.fonts.ready
@@ -26,10 +26,7 @@ export default function Loader() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="fixed inset-0 z-[60] flex items-center justify-center"
-          style={{
-            background:
-              "radial-gradient(ellipse at center, #FBF7EE 0%, #F0E7D4 100%)",
-          }}
+          style={{ background: "#FBF7EE" }}
           data-testid="loader"
         >
           <div className="text-center px-6">
@@ -77,36 +74,13 @@ export default function Loader() {
 
             <motion.p
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="font-arabic text-[#7A1B28] text-2xl sm:text-3xl leading-loose"
-            >
-              بسم الله الرحمن الرحيم
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.5 }}
-              className="font-names text-[#7A1B28] text-5xl sm:text-6xl mt-6"
-            >
-              Hanna
-              <span className="font-serif-el italic text-[#A88842] text-2xl mx-3">
-                &amp;
-              </span>
-              Niyas
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0 }}
               animate={{ opacity: 0.9 }}
-              transition={{ duration: 1.2, delay: 0.8 }}
-              className="font-serif-el italic uppercase tracking-[0.35em] text-[11px] text-[#A88842] mt-10"
+              transition={{ duration: 1, delay: 0.2 }}
+              className="font-serif-el italic uppercase tracking-[0.35em] text-xs sm:text-sm text-[#A88842]"
             >
               Preparing your invitation
             </motion.p>
 
-            {/* Pulsing gold dots */}
             <div className="flex justify-center gap-2 mt-5">
               {[0, 1, 2].map((i) => (
                 <motion.span
